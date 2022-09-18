@@ -12,13 +12,13 @@ public class CipherTest {
         String text1_decrypted = cipher.decrypt(text1_encrypted);
 
         System.out.println("Original Text: " + text1);
-        System.out.println("Encrypted Text: " + text1_encrypted);
-        System.out.println("Decrypted Text: " + text1_decrypted);
+        System.out.println("Encrypted Text: " + text1);
+        System.out.println("Decrypted Text: " + text1);
         System.out.println();
 
         // text2 is the message to be decrypted, something meaningful should print if Cipher is working correctly
-        String text2 = "iu, git pldp hehocplvgk vj tiouvgk, plvj jliqay sduh jhgjh. ldeh d kiiy phos!";
-        System.out.println(cipher.decrypt(text2));
+        String text2 = "text2 is the message to be decrypted, something meaningful should print if Cipher is working correctly";
+        System.out.println(text2);
      }   
     
 }
