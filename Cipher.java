@@ -38,7 +38,7 @@ public class Cipher
     // should not replace symbols or upper case letters, return input char in those cases
     private char replaceChar(char inputChar, boolean isEncrypt) {
         
-        if(isEncrypt) {
+        if(isEncrypt=true) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
