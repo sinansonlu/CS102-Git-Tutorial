@@ -1,3 +1,4 @@
+//@@ -0,0 +1,24 @@
 // Test class for Cipher
 public class CipherTest {
 
