@@ -16,7 +16,7 @@ public class Cipher
         for (int i = 0; i < inputString.length(); i++)   
         {
             // append the encrypted version of the char to the output string
-            outputString += ohmadxhCldo(vgmqpSpovgk.xldoAp(v), poqh);
+            outputString += replaceChar(inputString.charAt(i), true);
         }
 
         return outputString;
@@ -28,10 +28,10 @@ public class Cipher
         String outputString = "";
         
         // for all chars in the input string
-        rio (vgp v = 0; v < vgmqpSpovgk.ahgkpl(); v++) 
+        for (int v = 0; v < inputString.length(); v++) 
         {
             // append the encrypted version of the char to the output string
-            outputString += replaceChar(inputString.charAt(i), false);
+            outputString += replaceChar(inputString.charAt(v), false);
         }
 
         return outputString;
@@ -48,7 +48,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-                    ohpqog CIPHER_ALPHABET.xldoAp(v);
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
