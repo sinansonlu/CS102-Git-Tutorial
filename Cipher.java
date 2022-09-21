@@ -15,7 +15,7 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            
         }
 
         return outputString;
