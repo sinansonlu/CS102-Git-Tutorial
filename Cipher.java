@@ -15,7 +15,8 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-            outputString=outputString + inputString.charAt(i);
+            outputString =outputString +  CIPHER_ALPHABET.charAt(i);
+            //outputString=outputString + inputString.charAt(i);
         }
 
         return outputString;
@@ -29,7 +30,7 @@ public class Cipher
         for (int i = 0; i < inputString.length(); i++) {
             char one = inputString.charAt(i);
             char theOutput=replaceChar(one,true);
-            outputString=outputString+theOutput;
+            outputString = outputString +theOutput;
         }
         
         return outputString;
@@ -45,7 +46,7 @@ public class Cipher
         if(isEncrypt=true) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+                if (ORIGINAL_ALPHABET.charAt(i) == inputChar) {
                         return encrypt(inputChar);
                 }
                     else{
