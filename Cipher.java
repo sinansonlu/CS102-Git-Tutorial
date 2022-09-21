@@ -15,7 +15,11 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+<<<<<<< HEAD
             outputString += replaceChar(inputString.charAt(i), true);
+=======
+
+>>>>>>> main
         }
 
         return outputString;
@@ -32,6 +36,11 @@ public class Cipher
             }
         
         
+<<<<<<< HEAD
+=======
+        replaceChar('a',true);
+        
+>>>>>>> main
         return outputString;
     }
 
@@ -46,7 +55,11 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+<<<<<<< HEAD
                     return CIPHER_ALPHABET.charAt(i);
+=======
+
+>>>>>>> main
                 }
             }
         }
