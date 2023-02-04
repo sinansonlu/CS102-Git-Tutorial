@@ -1,6 +1,6 @@
 // Test class for Cipher
-public class CipherTest {
-
+public class CipherTest 
+{
     public static void main(String[] args)   
      {
         Cipher cipher = new Cipher();
@@ -19,6 +19,5 @@ public class CipherTest {
         // text2 is the message to be decrypted, something meaningful should print if Cipher is working correctly
         String text2 = "iu, git pldp hehocplvgk vj tiouvgk, plvj jliqay sduh jhgjh. ldeh d kiiy phos!";
         System.out.println(cipher.decrypt(text2));
-     }   
-    
+     }      
 }
