@@ -16,7 +16,7 @@ public class Cipher
         for (int i = 0; i < inputString.length(); i++)   
         {
             // append the encrypted version of the char to the output string
-            outputString += replaceChar(inputString.charAt(i), false);
+            outputString += replaceChar(inputString.charAt(i), true);
         }
 
         return outputString;
