@@ -11,11 +11,15 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+        // encrypted char will be collected in this variable, and outputString will 
+        // be formed concatenating this variable in each iteration. 
+        char encryptedChar = ' ';
         
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            encryptedChar = replaceChar(inputString.charAt(i),true);
+            outputString = outputString + encryptedChar;
         }
 
         return outputString;
@@ -25,8 +29,16 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+        // decrypted char will be collected in this variable, and outputString will 
+        // be formed concatenating this variable in each iteration. 
+        char decryptedChar = ' ';
         
-        replaceChar('a',true);
+         // for all chars in the input string
+        for (int i = 0; i < inputString.length(); i++)   
+        {
+            decryptedChar = replaceChar(inputString.charAt(i),false);
+            outputString = outputString + decryptedChar;
+        }
         
         return outputString;
     }
@@ -42,7 +54,10 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    
+                    // return statement for this condition was absent, so I added.
+                    return CIPHER_ALPHABET.charAt(i); 
+    
                 }
             }
         }
