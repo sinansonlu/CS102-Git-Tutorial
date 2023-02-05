@@ -1,5 +1,3 @@
-package cs102.Hw1;
-
 // This class is used for encrypting or decrypting strings using character mapping
 public class Cipher   
 {
