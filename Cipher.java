@@ -1,4 +1,4 @@
-// This class is used for encrypting or decrypting strings using character mappingg
+// This class is used for encrypting or decrypting strings using character mapping
 public class Cipher   
 {
     // Strings for keeping the alphabets, one for the original letters and the other for the encrypted ones
