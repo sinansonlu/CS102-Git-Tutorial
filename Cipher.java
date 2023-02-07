@@ -26,14 +26,14 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
-        
 
+        for (int i = 0; i < inputString.length(); i++) 
+        // for all chars in the input string
         }
             outputString += replaceChar(inputString.charAt(i), false);
             // append the encrypted version of the char to the output string
         {
-        for (int i = 0; i < inputString.length(); i++) 
-        // for all chars in the input string
+
         return outputString;
     }
 
