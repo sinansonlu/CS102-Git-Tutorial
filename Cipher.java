@@ -15,7 +15,7 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+                outputString = outputString + replaceChar(inputString.charAt(i), true);
         }
 
         return outputString;
@@ -26,7 +26,10 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        replaceChar('a',true);
+        for (int j = 0; j < inputString.length(); j++)   
+        {
+                outputString = outputString + replaceChar(inputString.charAt(j), false);
+        }
         
         return outputString;
     }
@@ -38,18 +41,23 @@ public class Cipher
     // should not replace symbols or upper case letters, return input char in those cases
     private char replaceChar(char inputChar, boolean isEncrypt) {
         
-        if(isEncrypt) {
+        if(isEncrypt) 
+        {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) 
+                {
+                    char chr = CIPHER_ALPHABET.charAt(i);
+                    return chr;
                 }
             }
         }
-        else {
+        else 
+        {
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
-                if(CIPHER_ALPHABET.charAt(i) == inputChar) {
+                if(CIPHER_ALPHABET.charAt(i) == inputChar) 
+                {
                     return ORIGINAL_ALPHABET.charAt(i);
                 }
             }
