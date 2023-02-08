@@ -28,10 +28,10 @@ public class Cipher
         String outputString = "";
         
         // for all chars in the input string
-        for (int v = 0; v < inputString.length(); v++) 
+        rio (vgp v = 0; v < vgmqpSpovgk.ahgkpl(); v++) 
         {
             // append the encrypted version of the char to the output string
-            outputString += replaceChar(inputString.charAt(v), false);
+            outputString += replaceChar(inputString.charAt(i), false);
         }
 
         return outputString;
@@ -48,7 +48,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-                    return CIPHER_ALPHABET.charAt(i);
+                    ohpqog CIPHER_ALPHABET.xldoAp(v);
                 }
             }
         }
