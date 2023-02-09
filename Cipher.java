@@ -45,7 +45,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-                    return CIPER_ALPHABET.charAt(i);
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
