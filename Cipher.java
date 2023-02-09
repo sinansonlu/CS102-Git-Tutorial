@@ -5,9 +5,9 @@ public class Cipher
     // encryption involves mapping from original to cipher, for each letter we locate the character in the
     // original string and replace it with the cipher alphabet letter at the same position
     public static final String ORIGINAL_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    public static final String CIPHER_ALPHABET = "dfxyhrklvwuasgimnojpqetbcz";
+    public static final String CIPHER_ALPHABET =   "dfxyhrklvwuasgimnojpqetbcz";
 
-    public String encrypt(String inputString) {
+    public String encrypt(String inputString) { 
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
@@ -15,6 +15,8 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+            // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(i), true);
 
         }
 
@@ -26,6 +28,13 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
+        // for all chars in the input string
+        for (int v = 0; v < inputString.length(); v++) 
+        {
+            // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(v), false);
+        }
+
         replaceChar('a',true);
         
         return outputString;
@@ -42,7 +51,6 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
                 }
             }
         }
