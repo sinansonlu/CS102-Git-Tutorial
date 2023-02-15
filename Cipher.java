@@ -1,6 +1,8 @@
 // This class is used for encrypting or decrypting strings using character mapping
 public class Cipher   
 {
+    //
+    
     // Strings for keeping the alphabets, one for the original letters and the other for the encrypted ones
     // encryption involves mapping from original to cipher, for each letter we locate the character in the
     // original string and replace it with the cipher alphabet letter at the same position
