@@ -15,7 +15,25 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            if(inputString.charAt(i)==' ')
+            {
+                outputString+=" ";
+            }
+            if((!Character.isLetter(inputString.charAt(i)))&&(inputString.charAt(i)!=' '))
+            {
+                outputString+=inputString.charAt(i);
+            }
+            else
+            {
+                for (int j=0; j<ORIGINAL_ALPHABET.length(); j++)
+                {
+                    
+                    if (inputString.charAt(i)==ORIGINAL_ALPHABET.charAt(j))
+                    {
+                        outputString+=CIPHER_ALPHABET.charAt(j);
+                    }
+                }
+            }   
         }
 
         return outputString;
@@ -26,8 +44,29 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        replaceChar('a',true);
-        
+        // for all chars in the input string
+        for (int i = 0; i < inputString.length(); i++) 
+        {
+            if(inputString.charAt(i)==' ')
+            {
+                outputString+=" ";
+            }
+            if((!Character.isLetter(inputString.charAt(i)))&&(inputString.charAt(i)!=' '))
+            {
+                outputString+=inputString.charAt(i);
+            }
+            else
+            {
+                for (int j=0; j<CIPHER_ALPHABET.length();j++)
+                {
+                    if (inputString.charAt(i)==CIPHER_ALPHABET.charAt(j))
+                    {
+                        outputString+=ORIGINAL_ALPHABET.charAt(j);
+                    }
+                }
+            }
+        }
+
         return outputString;
     }
 
@@ -41,21 +80,28 @@ public class Cipher
         if(isEncrypt) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
+                if ((Character.isUpperCase(ORIGINAL_ALPHABET.charAt(i)))||(!Character.isDigit(ORIGINAL_ALPHABET.charAt(i)))||(!Character.isWhitespace(ORIGINAL_ALPHABET.charAt(i))))
+                {
+                    return inputChar;
+                }
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    inputChar= CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
         else {
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
+                if ((Character.isUpperCase(CIPHER_ALPHABET.charAt(i)))||(!Character.isDigit(CIPHER_ALPHABET.charAt(i)))||(!Character.isWhitespace(CIPHER_ALPHABET.charAt(i))))
+                {
+                    return inputChar;
+                }
                 if(CIPHER_ALPHABET.charAt(i) == inputChar) {
-                    return ORIGINAL_ALPHABET.charAt(i);
+                    inputChar= ORIGINAL_ALPHABET.charAt(i);
                 }
             }
         }
         
-        // if we did not find it in the alphabet, then return the original char
         return inputChar;
     }
 }   
