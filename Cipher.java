@@ -33,8 +33,6 @@ public class Cipher
             // append the encrypted version of the char to the output string
             outputString += replaceChar(inputString.charAt(v), false);
         }
-
-        return outputString;
     }
 
     // replaces the given input char based on the given isEncrypt variable
