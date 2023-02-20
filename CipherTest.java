@@ -1,6 +1,4 @@
-// Test class for Cipher
 public class CipherTest {
-
     public static void main(String[] args)   
      {
         Cipher cipher = new Cipher();
