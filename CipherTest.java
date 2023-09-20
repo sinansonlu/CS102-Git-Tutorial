@@ -1,5 +1,6 @@
-// Test class for Cipher
 public class CipherTest {
+    // Test class for Cipher
+
 
     public static void main(String[] args)   
      {
@@ -22,3 +23,4 @@ public class CipherTest {
      }   
     
 }
+
