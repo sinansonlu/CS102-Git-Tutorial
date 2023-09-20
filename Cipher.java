@@ -31,7 +31,7 @@ public class Cipher
 
         for (int j = 0; j < inputString.length(); j++)
             {
-                char c = inputString.charAt(i);
+                char c = inputString.charAt(j);
                 c = replaceChar(c,false);
                 outputString += c;
                 
