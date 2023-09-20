@@ -43,16 +43,16 @@ public class Cipher
         if(isEncrypt) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-                        return CIPHER_ALPHABET.charAt(i);
+                if(CIPHER_ALPHABET.charAt(i) == inputChar) {
+                        return ORIGINAL_ALPHABET.charAt(i);
                 }
             }
         }
         else {
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
-                if(CIPHER_ALPHABET.charAt(i) == inputChar) {
-                    return ORIGINAL_ALPHABET.charAt(i);
+                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
