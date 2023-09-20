@@ -33,7 +33,6 @@ public class Cipher
             // append the encrypted version of the char to the output string
             outputString += replaceChar(inputString.charAt(i), false);
         }
-
         return outputString;
     }
 
