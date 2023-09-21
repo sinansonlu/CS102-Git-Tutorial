@@ -15,12 +15,7 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-            int index = ORIGINAL_ALPHABET.indexOf(inputString.charAt(i));
-            if(index != -1)
-                outputString += CIPHER_ALPHABET.charAt(index);
-            // if our index is -1 that means the character is a symbol or an uppercase letter.    
-            else
-                outputString += inputString.charAt(i);
+           outputString += replaceChar(inputString.charAt(i), true);
         }
 
         return outputString;
