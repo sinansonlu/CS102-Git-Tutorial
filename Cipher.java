@@ -15,7 +15,12 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            int index = ORIGINAL_ALPHABET.indexOf(inputString.charAt(i));
+            if(index != -1)
+                outputString += CIPHER_ALPHABET.charAt(index);
+            // if our index is -1 that means the character is a symbol or an uppercase letter.    
+            else
+                outputString += inputString.charAt(i);
         }
 
         return outputString;
@@ -26,7 +31,11 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        replaceChar('a',true);
+        for(int i =0; i < inputString.length(); i++){
+            /*we want to decrypt the message, so encrypted char has to be converted to the original,
+             boolean expression should be false */
+           outputString += replaceChar(inputString.charAt(i),false);
+        }
         
         return outputString;
     }
@@ -42,7 +51,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
