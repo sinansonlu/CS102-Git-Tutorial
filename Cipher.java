@@ -15,21 +15,48 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+        
+            
+            //It converts our encrypted letters from char to String and adds to our outputString.
+            //With loop, we can apply it to inputString.
+            
+            String enChar = Character.toString(replaceChar(inputString.charAt(i), true));
+            outputString += enChar;
+                
+            
+            }   
+            return outputString;
+            
         }
-
-        return outputString;
-    }
+        
+       
+    
 
     public String decrypt(String inputString) {
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+
+
+
+        //It converts our decrypted letters from char to String and adds to our outputString.
+        //With loop, we can apply it to inputString.
         
-        replaceChar('a',true);
+        for (int i = 0; i < inputString.length(); i++){
+           
+            
+            String decChar = Character.toString(replaceChar(inputString.charAt(i), false));
+            outputString += decChar;
+            
+            
+            }   
+            return outputString;
+        }
         
-        return outputString;
-    }
+        
+        
+        
+    
 
     // replaces the given input char based on the given isEncrypt variable
     // if isEncrypt == true -> original to encrypted
@@ -42,7 +69,9 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+                    return CIPHER_ALPHABET.charAt(i);
 
+                    //It indicates our encrypted letter and returns it, if it is a letter. 
                 }
             }
         }
@@ -50,7 +79,9 @@ public class Cipher
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
                 if(CIPHER_ALPHABET.charAt(i) == inputChar) {
+
                     return ORIGINAL_ALPHABET.charAt(i);
+                    //It indicates our decrypted letter and returns it, if it is a letter. 
                 }
             }
         }
