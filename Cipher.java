@@ -14,8 +14,18 @@ public class Cipher
         
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
-        {
-
+        {   if(inputString.charAt(i) != ' '){
+                for(int m = 0; m < ORIGINAL_ALPHABET.length(); m++){
+                
+                    if( inputString.charAt(i) == ORIGINAL_ALPHABET.charAt(m)){
+                    outputString += CIPHER_ALPHABET.charAt(m);
+                    }
+                
+                }
+            }
+            else{
+                outputString += " ";
+            }
         }
 
         return outputString;
@@ -25,8 +35,17 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+        for(int i = 0; i < inputString.length(); i++){
+            if(inputString.charAt(i) != ' '){
+            char charToReplace = inputString.charAt(i);
+            char replacedChar = replaceChar(charToReplace,false);
+            outputString += replacedChar;
+            }
+            else{
+                outputString += " ";
+            }
+        }
         
-        replaceChar('a',true);
         
         return outputString;
     }
@@ -42,7 +61,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
