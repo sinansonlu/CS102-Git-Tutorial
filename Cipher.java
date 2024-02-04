@@ -1,6 +1,8 @@
 // This class is used for encrypting or decrypting strings using character mapping
 public class Cipher   
 {
+    //I opened the orginal program by first developer and decoded and rewrote the code according to the encryption given 
+    
     // Strings for keeping the alphabets, one for the original letters and the other for the encrypted ones
     // encryption involves mapping from original to cipher, for each letter we locate the character in the
     // original string and replace it with the cipher alphabet letter at the same position
@@ -14,7 +16,9 @@ public class Cipher
         
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
-        {            
+        {   
+            //Added the body of for loop
+            
             // append the encrypted version of the char to the output string
             outputString += replaceChar(inputString.charAt(i), true);
         }
@@ -26,7 +30,9 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
-                
+
+        //Added the for loop
+        
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++) 
         {
@@ -48,6 +54,8 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+
+                    //Included this return statement
                     return CIPHER_ALPHABET.charAt(i);
                 }
             }
