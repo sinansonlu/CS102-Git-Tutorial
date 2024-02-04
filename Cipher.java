@@ -15,7 +15,19 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            int beforeLength = outputString.length();
+            for(int j = 0; j < ORIGINAL_ALPHABET.length(); j++)
+                {
+                    if(inputString.charAt(i) == ORIGINAL_ALPHABET.charAt(j)
+                       {
+                            outputString += CIPHER_ALPHABET.charAt(j);
+                            break;
+                       }
+                }
+            if(beforeLength == outputString.length())
+            {
+                outputString += inputString.charAt(i);
+            }
         }
 
         return outputString;
