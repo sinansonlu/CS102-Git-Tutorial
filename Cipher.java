@@ -49,6 +49,7 @@ public class Cipher
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
                     return CIPHER_ALPHABET.charAt(i);
+///////////////////
                 }
             }
         }
