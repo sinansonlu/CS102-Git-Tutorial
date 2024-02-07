@@ -36,7 +36,7 @@ public class Cipher
 
         return outputString;
     }
-
+    // 
     // replaces the given input char based on the given isEncrypt variable
     // if isEncrypt == true -> original to encrypted
     // if isEncrypt == false -> encrypted to original
