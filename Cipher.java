@@ -15,12 +15,8 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-<<<<<<< HEAD
             // append the encrypted version of the char to the output string
             outputString += replaceChar(inputString.charAt(i), true);
-=======
-
->>>>>>> c217c5836d9c40cb1f50de880c49588fd500f197
         }
 
         return outputString;
@@ -31,7 +27,6 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-<<<<<<< HEAD
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++) 
         {
@@ -39,11 +34,10 @@ public class Cipher
             outputString += replaceChar(inputString.charAt(i), false);
         }
 
-=======
         replaceChar('a',true);
         
->>>>>>> c217c5836d9c40cb1f50de880c49588fd500f197
-        return outputString;
+
+      return outputString;
     }
 
     // replaces the given input char based on the given isEncrypt variable
@@ -57,11 +51,8 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-<<<<<<< HEAD
                     return CIPHER_ALPHABET.charAt(i);
-=======
 
->>>>>>> c217c5836d9c40cb1f50de880c49588fd500f197
                 }
             }
         }
