@@ -15,18 +15,30 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+            char first_char= inputString.charAt(i);
 
+            char second_char= replaceChar(first_char, true);
+        
+            outputString=outputString+second_char;
         }
 
         return outputString;
     }
 
-    public String decrypt(String inputString) {
+    public String decrypt(String inputString) 
+    {
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        replaceChar('a',true);
+        for (int i = 0; i < inputString.length(); i++)   
+        {
+            char first_char= inputString.charAt(i);
+
+            char second_char= replaceChar(first_char, false);
+        
+            outputString=outputString+second_char;
+        }
         
         return outputString;
     }
@@ -41,15 +53,17 @@ public class Cipher
         if(isEncrypt) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) 
+                {
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
         else {
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
-                if(CIPHER_ALPHABET.charAt(i) == inputChar) {
+                if(CIPHER_ALPHABET.charAt(i) == inputChar) 
+                {
                     return ORIGINAL_ALPHABET.charAt(i);
                 }
             }
