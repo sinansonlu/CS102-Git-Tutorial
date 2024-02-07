@@ -7,7 +7,7 @@ public class CipherTest {
 
         // text1 is used for testing, encrypting followed by decrypting should return the original text
         String text1 = "this should be encrypted now!";
-        
+
         String text1_encrypted = cipher.encrypt(text1);
         String text1_decrypted = cipher.decrypt(text1_encrypted);
 
@@ -20,5 +20,5 @@ public class CipherTest {
         String text2 = "iu, git pldp hehocplvgk vj tiouvgk, plvj jliqay sduh jhgjh. ldeh d kiiy phos!";
         System.out.println(cipher.decrypt(text2));
      }   
-    
+
 }
