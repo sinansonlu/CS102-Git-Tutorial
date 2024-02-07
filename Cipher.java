@@ -1,11 +1,10 @@
-// This class is used for encrypting or decrypting strings using character mapping
 public class Cipher   
 {
     // Strings for keeping the alphabets, one for the original letters and the other for the encrypted ones
     // encryption involves mapping from original to cipher, for each letter we locate the character in the
     // original string and replace it with the cipher alphabet letter at the same position
     public static final String ORIGINAL_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    public static final String CIPHER_ALPHABET = "dfxyhrklvwuasgimnojpqetbcz";
+    public static final String CIPHER_ALPHABET =   "dfxyhrklvwuasgimnojpqetbcz";
 
     public String encrypt(String inputString) {
         
@@ -13,11 +12,12 @@ public class Cipher
         String outputString = "";
         
         // for all chars in the input string
+        
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            outputString += replaceChar(inputString.charAt(i), true);
         }
-
+        
         return outputString;
     }
 
@@ -25,8 +25,13 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+
+        for (int i = 0; i < inputString.length(); i++)   
+        {
+            outputString += replaceChar(inputString.charAt(i), false);
+        }
         
-        replaceChar('a',true);
+        
         
         return outputString;
     }
@@ -41,15 +46,20 @@ public class Cipher
         if(isEncrypt) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) 
+                {
+                    inputChar = CIPHER_ALPHABET.charAt(i);
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
-        else {
+        else 
+        {
             for (int i = 0; i < CIPHER_ALPHABET.length(); i++)   
             {
-                if(CIPHER_ALPHABET.charAt(i) == inputChar) {
+                if(CIPHER_ALPHABET.charAt(i) == inputChar) 
+                {
+                    inputChar = ORIGINAL_ALPHABET.charAt(i);
                     return ORIGINAL_ALPHABET.charAt(i);
                 }
             }
