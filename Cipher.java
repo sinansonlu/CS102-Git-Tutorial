@@ -15,7 +15,7 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            outputString = inputString.replaceChar(i, CIPHER_ALPHABET.charAt(i))
         }
 
         return outputString;
@@ -41,7 +41,10 @@ public class Cipher
         if(isEncrypt) {
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
-                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
+                if(ORIGINAL_ALPHABET.charAt(i) == inputChar) 
+                {
+                    
+                    
 
                 }
             }
