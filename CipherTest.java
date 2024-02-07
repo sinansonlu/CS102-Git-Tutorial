@@ -1,4 +1,5 @@
 // Test class for Cipher
+//Modifications
 public class CipherTest {
 
     public static void main(String[] args)   
