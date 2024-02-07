@@ -11,7 +11,7 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
-        
+        //
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
