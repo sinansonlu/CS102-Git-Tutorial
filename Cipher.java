@@ -8,7 +8,7 @@ public class Cipher
     public static final String CIPHER_ALPHABET = "dfxyhrklvwuasgimnojpqetbcz";
 
     public String encrypt(String inputString) {
-        
+        //
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
