@@ -34,7 +34,10 @@ public class Cipher
             outputString += replaceChar(inputString.charAt(i), false);
         }
 
-        return outputString;
+        replaceChar('a',true);
+        
+
+      return outputString;
     }
 
     // replaces the given input char based on the given isEncrypt variable
@@ -49,6 +52,7 @@ public class Cipher
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
                     return CIPHER_ALPHABET.charAt(i);
+
                 }
             }
         }
