@@ -18,7 +18,7 @@ public class Cipher
         {
             ch = inputString.charAt(i);
             ch=replaceChar(ch,true);
-            outputString+=ch;
+            outputString+=ch; //characters are added to new string one by one 
         }
 
         return outputString;
@@ -34,7 +34,7 @@ public class Cipher
         {
             ch = inputString.charAt(i);
             ch=replaceChar(ch, false);
-            outputString+=ch;
+            outputString+=ch; //characters are added to new string one by one 
         }
 
         
