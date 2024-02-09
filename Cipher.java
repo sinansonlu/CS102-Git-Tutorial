@@ -15,7 +15,9 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
-
+            // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(i), true);
+            // 19th line has been corrected in order it to call the replaceChar method properly
         }
 
         return outputString;
@@ -26,8 +28,13 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        replaceChar('a',true);
-        
+        // for all chars in the input string
+        for (int i = 0; i < inputString.length(); i++) //this for loop has been corrected in order to have a functional for loop statement
+        {
+            // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(i), false);
+        }
+
         return outputString;
     }
 
@@ -42,7 +49,8 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    return CIPHER_ALPHABET.charAt(i);
+                    // the return statement on the 52nd line has been corrected in order it to return the corresponing letter from the chiper alphabet 
                 }
             }
         }
