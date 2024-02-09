@@ -28,11 +28,11 @@ public class Cipher
         String outputString = "";
         
 
-            outputString += "" + replaceChar(inputString.charAt(i), false);
         {
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++) 
             // append the encrypted version of the char to the output string
+            outputString += "" + replaceChar(inputString.charAt(i), false);
         }
         return outputString;
     }
