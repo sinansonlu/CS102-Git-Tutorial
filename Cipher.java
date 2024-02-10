@@ -15,6 +15,8 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+             // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(i), true); 
 
         }
 
@@ -25,6 +27,13 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
+        
+        // for all chars in the input string
+        for (int i = 0; i < inputString.length(); i++) 
+        {
+            // append the encrypted version of the char to the output string
+            outputString += replaceChar(inputString.charAt(i), false);
+        }
         
         replaceChar('a',true);
         
