@@ -23,6 +23,9 @@ public class Cipher
                 char toBePut = CIPHER_ALPHABET.charAt(position);
                 outputString += toBePut;
             }
+            else {
+                outputString += toBeFound;
+            }
 
         }
 
@@ -34,10 +37,10 @@ public class Cipher
         // output string will be collected in this variable, one char at a time
         String outputString = "";
         
-        for (int i = 0; i < inputString.length(); i++ ){
+        for ( int i = 0; inputString.length() > i; i++ ){
 
-            outputString += replaceChar(inputString.charAt(i),true);
-        
+            outputString += replaceChar(inputString.charAt(i),false);
+
         }
         return outputString;
     }
