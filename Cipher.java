@@ -1,11 +1,12 @@
 // This class is used for encrypting or decrypting strings using character mapping
+
 public class Cipher   
 {
     // Strings for keeping the alphabets, one for the original letters and the other for the encrypted ones
     // encryption involves mapping from original to cipher, for each letter we locate the character in the
     // original string and replace it with the cipher alphabet letter at the same position
     public static final String ORIGINAL_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    public static final String CIPHER_ALPHABET = "dfxyhrklvwuasgimnojpqetbcz";
+    public static final String CIPHER_ALPHABET =   "dfxyhrklvwuasgimnojpqetbcz";
 
     public String encrypt(String inputString) {
         
@@ -15,7 +16,17 @@ public class Cipher
         // for all chars in the input string
         for (int i = 0; i < inputString.length(); i++)   
         {
+            outputString += replaceChar(inputString.charAt(i), true);
 
+            /* if ((inputString.charAt(i) <= 'z' && inputString.charAt(i) >= 'a') ||
+                (inputString.charAt(i) <= 'Z' && inputString.charAt(i) >= 'A')){
+
+                int charIndex = ORIGINAL_ALPHABET.indexOf(inputString.substring(i, i + 1));
+                outputString += CIPHER_ALPHABET.substring(charIndex, charIndex + 1);
+            }
+            else{
+                outputString += inputString.substring(i, i + 1);
+            } */
         }
 
         return outputString;
@@ -25,8 +36,21 @@ public class Cipher
         
         // output string will be collected in this variable, one char at a time
         String outputString = "";
-        
-        replaceChar('a',true);
+
+        for (int i = 0; i < inputString.length(); i++)   
+        {
+            outputString += replaceChar(inputString.charAt(i), false);
+
+            /* if ((inputString.charAt(i) <= 'z' && inputString.charAt(i) >= 'a') ||
+                (inputString.charAt(i) <= 'Z' && inputString.charAt(i) >= 'A')){
+
+                int charIndex = CIPHER_ALPHABET.indexOf(inputString.substring(i, i + 1));
+                outputString += ORIGINAL_ALPHABET.substring(charIndex, charIndex + 1);
+            }
+            else{
+                outputString += inputString.substring(i, i + 1);
+            } //this code is much better and efficient btw */
+        }
         
         return outputString;
     }
@@ -42,7 +66,7 @@ public class Cipher
             for (int i = 0; i < ORIGINAL_ALPHABET.length(); i++)   
             {
                 if(ORIGINAL_ALPHABET.charAt(i) == inputChar) {
-
+                    return CIPHER_ALPHABET.charAt(i);
                 }
             }
         }
